@@ -1,0 +1,17 @@
+body{
+    font-style: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+p{
+    font-size: 22px;
+}
+
+.main{
+   margin: 2%;
+   padding: 1%;
+   float: left; 
+}
+
+img{
+    float: right;
+}
