@@ -15,7 +15,6 @@ function makeid(){
 var playGame = confirm("Ready to play?");
 console.log(playGame);
 
-
 if (playGame){
     
     i=0;
@@ -23,6 +22,7 @@ if (playGame){
     while (i<9){
 
     userGuess = prompt("Choose a Letter");
+    console.log(userGuess);
     userGuessShow += userGuess;
     document.getElementById("GuessSoFar").innerHTML = userGuessShow;
        
