@@ -3,34 +3,67 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+           crossorigin="anonymous">       
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="assets/javascript/game.js"></script>
     <title>Psychic Game</title>
 </head>
 
 <body>
+    
+<body background="assets/images/background.jpg">
 
-<div class = "main">
+    <header>
+       <h1>The Psychic Game</h1>
+       <h2>Guess What Letter I'm Thinking Of</h2>
+    </header>
 
-<h1> The Psychic Game</h1>
+    <br>
+       
+    <div class = "content">
 
-<h2>Guess What Letter I'm Thinking Of</h2>
+        <div class="row">
+            <div class="col-sm-2">
+                <p> <strong>Wins</strong></p> 
+            </div>
+            <div class="col-sm-1">
+                <p id="win"></p>
+            </div>
+        </div>   
 
-<br>
+    <div class="row">
+        <div class="col-sm-2">
+        <p> <strong>Losses</strong></p> 
+        </div>
+        <div class="col-sm-1">
+        <p id="loss"></p>
+        </div>
+    </div>   
 
-<p> Wins:</p> <p id ="Win"></p>
+    <div class="row">    
+        <div class="col-sm-2">
+        <p> <strong>Guesses Left</strong></p> 
+        </div>
+        <div class="col-sm-1">
+        <p id="guessLeft"></p>
+        </div>
+    </div>    
 
-<p> Losses:</p> <p id ="Loss"></p>
+    <div class="row"> 
+        <div class="col-sm-2">
+        <p> <strong>Guesses So Far</strong></p> 
+        </div>
+        <div class="col-sm-3">
+        <p id="guessSoFar"></p>
+        </div>
+    </div>
 
-<p> Guesses Left:</p> <p id ="GuessLeft"></p>
+    </div>
 
-<p> Your Guesses So Far:</p> <p id ="GuessSoFar"></p>
+    <button type="button" id="btn" onclick="psychicGame()" class="btn btn-primary btn-lg btn-block">Start Playing!</button>
+   
+    </body>
 
-</div>
-
-<img src="assets/images/background.jpg" alt="Crystal Ball">
-
-<script src="assets/javascript/game.js"></script>
-
-</body>
-
-</html>
+    </html>

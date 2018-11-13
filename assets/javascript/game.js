@@ -1,3 +1,5 @@
+function psychicGame(){
+
 var counterWin=0;
 var counterLoss=0;
 var counterGuessLeft = 9;
@@ -5,57 +7,50 @@ var userGuess = 0;
 var computerGuess;
 var userGuessShow="";
 
-function makeid(){
-   computerGuess="";
-   var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";       
-   computerGuess += possible.charAt(Math.floor(Math.random() * possible.length));
-   return computerGuess;
-   }
+var i=0;
 
-var playGame = confirm("Ready to play?");
-console.log(playGame);
+//To clear slate//
+document.getElementById("guessSoFar").innerHTML = 0;
+document.getElementById("win").innerHTML = 0;
+document.getElementById("loss").innerHTML = 0;
+document.getElementById("guessLeft").innerHTML = 0;
 
-if (playGame){
-    
-    i=0;
 
-    while (i<9){
+while (i<9){
 
-    userGuess = prompt("Choose a Letter");
-    console.log(userGuess);
-    userGuessShow += userGuess;
-    document.getElementById("GuessSoFar").innerHTML = userGuessShow;
+    computerGuess="";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";       
+    computerGuess = possible.charAt(Math.floor(Math.random() * possible.length));
+    console.log("computerGuess is "+ computerGuess);
+
+    userGuess = prompt ("Choose one letter:")
+    console.log("userGuess is " + userGuess);
+    userGuessShow += (userGuess + ", ");
+    document.getElementById("guessSoFar").innerHTML = userGuessShow;
        
-    makeid();
-    console.log("computerGuess "+ computerGuess);
-    
-
     if(userGuess===computerGuess){
       counterWin++;
-      document.getElementById("Win").innerHTML = counterWin;
       console.log("counterWin "+ counterWin);
-    }
+      document.getElementById("win").innerHTML = counterWin;
+      }
   
     else{   
        counterLoss++;
        console.log( "counterLoss " + counterLoss);
-       document.getElementById("Loss").innerHTML = counterLoss;
-     
+       document.getElementById("loss").innerHTML = counterLoss;
     }
    
     counterGuessLeft = counterGuessLeft-1;
-    document.getElementById("GuessLeft").innerHTML = counterGuessLeft;
+    document.getElementById("guessLeft").innerHTML = counterGuessLeft;
     console.log("counterGuessLeft "+ counterGuessLeft);
 
-    i=i+1;
+    i++;
     }
+
+alert("To play again, press Start Playing!")    
+
 }
 
-else{
-    alert("Please Come Back!");
-}    
- 
 
- 
 
 
